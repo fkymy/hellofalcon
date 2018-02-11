@@ -1,0 +1,13 @@
+memo
+
+gunicorn --reload look.app
+waitress-serve --port=8000 look:app
+
+source .venv/bin/activate
+ipython
+gunicorn
+httpie
+msgpack-python
+pytest
+mock
+
