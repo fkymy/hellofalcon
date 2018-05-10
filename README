@@ -9,6 +9,7 @@ source .venv/bin/activate
 
  - gunicorn with code reload
 gunicorn --reload look.app
+LOOK_STORAGE_PATH=/tmp gunicorn --reload 'look.app:get_app()'
 
  - ipython (just use standard with help())
 
@@ -26,3 +27,7 @@ response ← │            │
  - msgpack-python
 
  - pytest
+
+ - coverage.py (https://coverage.readthedocs.io/en/coverage-4.5.1/)
+
+
