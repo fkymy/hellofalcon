@@ -1,13 +1,30 @@
 memo
 
-gunicorn --reload look.app
-waitress-serve --port=8000 look:app
+ - just a wsgi callable
 
+ - pypy easiest setup
+
+ - venv
 source .venv/bin/activate
-ipython
-gunicorn
-httpie
-msgpack-python
+
+ - gunicorn with code reload
+gunicorn --reload look.app
+
+ - ipython (just use standard with help())
+
+ - httpie (http localhost:8000/path/to/resource)
+
+ - 
+
+           ┌────────────┐
+request  → │            │
+           │ Resource   │ ↻ Orchestrate the requested action
+           │ Controller │ ↻ Compose the result
+response ← │            │
+           └────────────┘
+
+ - msgpack-python
+
 pytest
 mock
 
