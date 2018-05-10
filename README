@@ -25,6 +25,4 @@ response ← │            │
 
  - msgpack-python
 
-pytest
-mock
-
+ - pytest
